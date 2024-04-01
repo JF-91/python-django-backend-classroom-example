@@ -8,4 +8,3 @@ router.register(r'todos', TodoView, 'todo')
 urlpatterns = [
     path('', include(router.urls)),
 ]
-
