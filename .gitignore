@@ -1,1 +1,3 @@
-app/post_images
+app/post_images/*.*')
+    .pipe(gulp.dest('dist/app/post_images'));
+});
