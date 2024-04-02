@@ -1,10 +1,8 @@
-// move to config fronted 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
-////
+import ThemeConfig from './config/ThemeConfig.jsx';
 
 
 import React from 'react'
@@ -14,6 +12,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <ThemeConfig>
+      <App />
+    </ThemeConfig>
   </React.StrictMode>,
 )
