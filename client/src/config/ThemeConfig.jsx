@@ -1,16 +1,16 @@
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
-const ThemePalette = {
+export const ThemePalette = {
     
-    BG:'#FFFFFF',
-    PURPLE: '#B2B0DF',
-    GREY: '#c8c7cb',
+    BG:'#ECFDF5',
+    PRIMARY: '#064E3B',
+    SECONDARY: '#059669',
     FONT_GLOBAL: "'Lato', Barlow",
     //Alerts types
     ERROR_MAIN: '#f44336',
-    BG_ERROR_MAIN: 'rgba(244,67,54,0,1)',
-    SUCCESS_MAIN: '#66bb6a',
-    BG_SUCCESS_MAIN: 'rgba(102,187,106,0.1)',
+    BG_ERROR_MAIN: 'rgba(#f44336,0,1)',
+    SUCCESS_MAIN: '#65A30D',
+    BG_SUCCESS_MAIN: 'rgba(#65A30D,0.1)',
 }
 
 const theme = createTheme({
@@ -20,15 +20,35 @@ const theme = createTheme({
       default: ThemePalette.BG,
     },
     primary:{
-      main: ThemePalette.PURPLE,
+      main: ThemePalette.PRIMARY,
     },
     secondary:{
-      main:ThemePalette.GREY,
+      main:ThemePalette.SECONDARY,
+    },
+    text:{
+      primary: '#000',
+      secondary: '#fff',
     },
     
   },
   typography:{
-    fontFamily: ThemePalette.FONT_GLOBAL
+    fontFamily: ThemePalette.FONT_GLOBAL,
+    body1:{
+      fontSize: '1em',
+      color: 'primary',
+    },
+    body2:{
+      fontSize: '0.8em',
+      color: '#000',
+    },
+    link: {
+      textDecoration: 'none',
+      color: ThemePalette.PRIMARY,
+      '&:hover': {
+        color: `rgba(${ThemePalette.PRIMARY}, 0.9)`,
+        textDecoration: 'underline',
+      },
+    }
   },
   components:{
     MuiButton:{
@@ -38,11 +58,10 @@ const theme = createTheme({
           boxShadow:'none',
           borderRadius:'0.5em'
         }
-        
       },
       styleOverrides:{
         outlined:{
-          '&:hover':{background:"rgb(200,162,400,0.20)"}
+          '&:hover':{background:"rgb(#064E3B,0.20)"}
         }
       }
     },

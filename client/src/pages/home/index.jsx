@@ -1,7 +1,7 @@
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="relative">
         <h1>Home</h1>
     </div>
   )
