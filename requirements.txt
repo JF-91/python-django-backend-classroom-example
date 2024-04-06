@@ -3,3 +3,4 @@ djangorestframework
 drf_yasg
 setuptools
 pillow
+django-cors-headers
